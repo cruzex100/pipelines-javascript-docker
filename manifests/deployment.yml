@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: cruzexpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cruzexpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cruzexpipelinesjavascriptdocker 
+          image: thvargcontainerregistry.azurecr.io/cruzexpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
